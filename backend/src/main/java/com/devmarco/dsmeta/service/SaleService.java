@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 
 import com.devmarco.dsmeta.repository.SaleRepository;
 import com.devmarco.dsmeta.requests.SalePostRequestBody;
+import com.devmarco.dsmeta.requests.SalePutRequestBody;
 import com.devmarco.dsmeta.domain.Sale;
+import com.devmarco.dsmeta.exception.BadRequestException;
 
 
 
@@ -21,6 +23,11 @@ import com.devmarco.dsmeta.domain.Sale;
 public class SaleService {
 	@Autowired
 	private SaleRepository saleRepository;
+	
+	public Sale findSale(long id) {
+		return saleRepository.findById(id)
+				.orElseThrow(() -> new BadRequestException("Sale Not Found"));
+	}
 	
 	public Page<Sale> findSales(String minDate, String maxDate, Pageable pageable){
 		LocalDate today = LocalDate.ofInstant(
@@ -43,5 +50,23 @@ public class SaleService {
 						.date(salePostRequestBody.getDate())
 						.build()
 				);
+	}
+	
+	public void delete(long id) {
+		saleRepository.delete(findSale(id));
+	}
+	
+	public void replace(SalePutRequestBody salePutRequestBody) {
+		Sale savedSale = findSale(salePutRequestBody.getId());
+		Sale sale = Sale.builder()
+				.id(savedSale.getId())
+				.sellerName(salePutRequestBody.getSellerName())
+				.visited(salePutRequestBody.getVisited())
+				.deals(salePutRequestBody.getDeals())
+				.amount(salePutRequestBody.getAmount())
+				.date(salePutRequestBody.getDate())
+				.build();
+		
+		saleRepository.save(sale);
 	}
 }
