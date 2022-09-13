@@ -6,6 +6,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Sale } from '../../models/Sale';
 import axios from 'axios';
 import { BASE_URL } from '../../utils/requests';
+import DeleteButton from '../DeleteButton';
+import { toast } from 'react-toastify';
 
 function SalesCard() {
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
@@ -24,7 +26,10 @@ function SalesCard() {
             .then(response => {
                 setSales(response.data.content);
             });
-    }, [minDate, maxDate])
+    }, [minDate, maxDate, sales])
+
+
+
 
     return (
         <>
@@ -60,6 +65,7 @@ function SalesCard() {
                                 <th className="show992">Vendas</th>
                                 <th>Total</th>
                                 <th>Notificar</th>
+                                <th>Deletar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -74,7 +80,12 @@ function SalesCard() {
                                         <td>R$ {sale.amount}</td>
                                         <td>
                                             <div className="dsmeta-red-btn-container">
-                                                <NotificationButton saleId={sale.id}/>
+                                                <NotificationButton saleId={sale.id} />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className='dsmeta-red-btn-container' >
+                                                <DeleteButton saleId={sale.id} />
                                             </div>
                                         </td>
                                     </tr>
