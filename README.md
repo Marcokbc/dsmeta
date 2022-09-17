@@ -22,6 +22,7 @@ Entretanto, o projeto acabou por ter novos horizontes. Sales System ainda está 
 - Spring Boot
 - JPA / Hibernate
 - Maven
+- Lombok
 ## Front end
 - HTML / CSS / JS / TypeScript
 - ReactJS
