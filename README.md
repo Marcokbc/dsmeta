@@ -7,7 +7,7 @@ https://dsmeta-marcodev.netlify.app/
 
 Sales System é uma aplicação full stack web construída durante a **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
-A aplicação consiste em site onde se tem um controle de vendas, contendo a quantidade vendida, o vendedor, a data, a quantidade de visitas e as vendas. Além disso, o projeto se dispõe a enviar uma notificação via SMS, com a ferramenta Twilio, contendos informações sobre a venda realizada. 
+A aplicação consiste em um site onde se tem um controle de vendas, contendo a quantidade vendida, o vendedor, a data, a quantidade de visitas e as vendas. Além disso, o projeto se dispõe a enviar uma notificação via SMS, com a ferramenta Twilio, contendo informações sobre a venda realizada. 
 Entretanto, o projeto acabou por ter novos horizontes. Sales System ainda está em desenvolvimento, visto que o front-end ainda necessita requisitar os outros metodos HTTP que a API produzida disponibliza.
 
 ## Layout web
