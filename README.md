@@ -1,25 +1,20 @@
-# Sale 
+# Sales System
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/devsuperior/sds1-wmazoni/blob/master/LICENSE) 
 
 # Sobre o projeto
 
 https://dsmeta-marcodev.netlify.app/
 
-Big Game Survey é uma aplicação full stack web construída durante a **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Sales System é uma aplicação full stack web construída durante a **Semana DevSuperior**, evento organizado pela [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
 A aplicação consiste em site onde se tem um controle de vendas, contendo a quantidade vendida, o vendedor, a data, a quantidade de visitas e as vendas. Além disso, o projeto se dispõe a enviar uma notificação via SMS, com a ferramenta Twilio, contendos informações sobre a venda realizada. 
-Entretanto, o projeto acabou por ter novos horizontes. (nome do projeto) Ainda está em desenvolvimento, visto que o front-end ainda necessita requisitar os outros metodos HTTP que a API produzida disponibliza.
-
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
+Entretanto, o projeto acabou por ter novos horizontes. Sales System ainda está em desenvolvimento, visto que o front-end ainda necessita requisitar os outros metodos HTTP que a API produzida disponibliza.
 
 ## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
+![layout](https://user-images.githubusercontent.com/88397083/190874993-2b1f59fc-e824-4afe-a67c-f14e2dba4fe1.png)
 
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
 
 # Tecnologias utilizadas
 ## Back end
@@ -72,4 +67,4 @@ yarn start
 
 Marco Antônio Meira de Lima
 
-https://www.linkedin.com/in/wmazoni
+https://www.linkedin.com/in/marco-ant%C3%B4nio-meira-7a35bb234/
