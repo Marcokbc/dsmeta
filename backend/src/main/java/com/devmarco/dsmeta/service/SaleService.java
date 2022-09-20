@@ -43,7 +43,7 @@ public class SaleService {
 	@Transactional
 	public Sale save(SalePostRequestBody salePostRequestBody) {
 		return saleRepository.save(Sale.builder()
-						.sellerName(salePostRequestBody.getSellerName())
+						.seller(salePostRequestBody.getSeller())
 						.visited(salePostRequestBody.getVisited())
 						.deals(salePostRequestBody.getDeals())
 						.amount(salePostRequestBody.getAmount())
@@ -60,7 +60,7 @@ public class SaleService {
 		Sale savedSale = findSale(salePutRequestBody.getId());
 		Sale sale = Sale.builder()
 				.id(savedSale.getId())
-				.sellerName(salePutRequestBody.getSellerName())
+				.seller(salePutRequestBody.getSeller())
 				.visited(salePutRequestBody.getVisited())
 				.deals(salePutRequestBody.getDeals())
 				.amount(salePutRequestBody.getAmount())
