@@ -8,6 +8,8 @@ import axios from 'axios';
 import { BASE_URL } from '../../utils/requests';
 import DeleteButton from '../DeleteButton';
 import { toast } from 'react-toastify';
+import PutButton from '../PutButton';
+import ModalPut from '../ModalPut';
 
 function SalesCard() {
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
@@ -15,7 +17,7 @@ function SalesCard() {
 
     const [minDate, setMinDate] = useState(min);
     const [maxDate, setMaxDate] = useState(max);
-
+    const [isModalVisible, setIsModalVisible] = useState(false);
     const [sales, setSales] = useState<Sale[]>([]);
 
     useEffect(() => {
@@ -66,6 +68,7 @@ function SalesCard() {
                                 <th>Total</th>
                                 <th>Notificar</th>
                                 <th>Deletar</th>
+                                <th>Alterar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,6 +89,11 @@ function SalesCard() {
                                         <td>
                                             <div className='dsmeta-red-btn-container' >
                                                 <DeleteButton saleId={sale.id} />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div className='dsmeta-red-btn-container' onClick={() => {setIsModalVisible(true)}}>
+                                                <PutButton saleId={sale.id}/>
                                             </div>
                                         </td>
                                     </tr>

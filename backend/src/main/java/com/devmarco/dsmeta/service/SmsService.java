@@ -33,10 +33,11 @@ public class SmsService {
 	public void sendSms(Long saleId) {
 		
 		Sale sale = saleRepository.findById(saleId).get();
+		String sellerName = sale.getSeller().getName();
 		String date = sale.getDate().getMonthValue() 
 				+ "/" + sale.getDate().getYear();
 		
-		String msg = "O vendedor " + sale.getSeller() + " foi destaque em " + date
+		String msg = "O vendedor " + sellerName + " foi destaque em " + date
 			    + " com um total de R$ " + new DecimalFormat("#,##0.00").format(sale.getAmount());
 
 		
