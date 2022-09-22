@@ -15,8 +15,7 @@ Entretanto, o projeto acabou por ter novos horizontes. Sales System ainda está 
 
 
 ## Modelo conceitual
-![Documento em branco](https://user-images.githubusercontent.com/88397083/191341534-7954e0cf-9097-4885-8bc2-b451ffbaa700.png)
-
+![Marco](https://user-images.githubusercontent.com/88397083/191740956-cbc7a8ad-9604-4bf0-b14a-3ef14df481fd.png)
 
 # Tecnologias utilizadas
 ## Back end
