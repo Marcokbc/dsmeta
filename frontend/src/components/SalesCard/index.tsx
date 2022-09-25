@@ -29,6 +29,7 @@ function SalesCard() {
                 setSales(response.data.content);
             });
     }, [minDate, maxDate, sales])
+    // console.log(sales);
 
 
 
@@ -77,7 +78,7 @@ function SalesCard() {
                                     <tr key={sale.id}>
                                         <td className="show992">#{sale.id}</td>
                                         <td className="show576">{new Date(sale.date).toLocaleDateString()}</td>
-                                        <td>{sale.sellerName}</td>
+                                        <td>{sale.seller.name}</td>
                                         <td className="show992">{sale.visited}</td>
                                         <td className="show992">{sale.deals}</td>
                                         <td>R$ {sale.amount}</td>
