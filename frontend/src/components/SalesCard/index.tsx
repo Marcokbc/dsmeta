@@ -10,6 +10,7 @@ import DeleteButton from '../DeleteButton';
 import { toast } from 'react-toastify';
 import PutButton from '../PutButton';
 import ModalPut from '../ModalPut';
+import { Link } from 'react-router-dom';
 
 function SalesCard() {
     const min = new Date(new Date().setDate(new Date().getDate() - 365));
@@ -55,8 +56,11 @@ function SalesCard() {
                             dateFormat="dd/MM/yyyy"
                         />
                     </div>
+                    <Link to='/create'>
+                        <button className='btn-cadastrar'>Cadastrar Venda</button>
+                    </Link>
                 </div>
-
+                
                 <div>
                     <table className="dsmeta-sales-table">
                         <thead>

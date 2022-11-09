@@ -72,6 +72,15 @@
     display: none;
 }
 
+.btn-cadastrar{
+    background: #676fff;
+    color: rgb(0, 0, 0);
+    border: 1px solid;
+    border-radius: 20px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
 @media (min-width: 576px) {
     .show576 {
         display: table-cell;
